@@ -1,18 +1,16 @@
 #include<iostream>
 using namespace std;
 void selection(int *a, int n){
-  int i,j,m,x,t,f;
+  int i,j,m,x,t;
   for(i=0;i<n-1;i++){
     m=a[i];
-    f=0;
     for(j=i+1;j<n;j++){
       if(a[j]<m){
         m=a[j];
         x=j;
-        f=1;
       }
     }
-    if(f==1){
+    if(x!=i){
     t=a[i];
     a[i]=a[x];
     a[x]=t;
